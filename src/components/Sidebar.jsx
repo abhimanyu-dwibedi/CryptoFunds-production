@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { logo, sun } from '../assets';
+import { logo, sun,logout } from '../assets';
 import { navlinks } from '../constants';
 
 const Icon = ({ styles, name, imgUrl, isActive, disabled, handleClick }) => (
@@ -13,6 +13,9 @@ const Icon = ({ styles, name, imgUrl, isActive, disabled, handleClick }) => (
         )}
     </div>
 )
+const runfun=()=>{
+  console.log("hello")
+}
 const Sidebar = () => {
     const navigate = useNavigate();
     const [isActive, setIsActive] = useState('dashboard');
@@ -38,7 +41,7 @@ const Sidebar = () => {
             />
           ))}
               </div>
-               <Icon styles="bg-[#1c1c24] shadow-secondary" imgUrl={sun} />
+               <Icon styles="bg-[#1c1c24] shadow-secondary" imgUrl={logout} />
           </div>
     </div>
   )
